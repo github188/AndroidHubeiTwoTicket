@@ -1,6 +1,7 @@
 package tickets.nari.com.hubeitickets.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +21,11 @@ import tickets.nari.com.hubeitickets.bean.ArchivedTicketListBean;
 public class CaoZuoPiao_List_Adapter extends BaseAdapter {
     private Context mContext;
     private List<ArchivedTicketListBean> ticketList; //   票列表集合
-    public CaoZuoPiao_List_Adapter(Context mContext, List<ArchivedTicketListBean> ticketList) {
+    private String status = "0";
+    public CaoZuoPiao_List_Adapter(Context mContext, List<ArchivedTicketListBean> ticketList,String status) {
         this.mContext = mContext;
         this.ticketList = ticketList;
+        this.status = status;
     }
     @Override
     public int getCount() {
@@ -58,15 +61,19 @@ public class CaoZuoPiao_List_Adapter extends BaseAdapter {
         }
 
 //        String status = ticketList.get(position).getPZT();
-//        if("21".equals(status)) { //   待审核
-////            holder.iv_ygd_status.setImageResource(R.mipmap.daishenhe);
-//        }else if ("31".equals(status)) { //   待执行
-////            holder.iv_ygd_status.setImageResource(R.mipmap.daizhixing);
-//        }else if ("41".equals(status)) { //   执行中
-////            holder.iv_ygd_status.setImageResource(R.mipmap.zhixing);
-//        }else if ("51".equals(status)) { //   已归档
-//
-//        }
+        if("0".equals(status)) { //   待审核
+            holder.iv_ygd_status.setText("待处理");
+
+            holder.iv_ygd_status.setBackgroundResource(R.drawable.textview_border_red);
+        }else if ("1".equals(status)) { //   执行中
+            holder.iv_ygd_status.setText("执行中");
+            holder.iv_ygd_status.setTextColor(Color.parseColor("#fdb96d"));
+            holder.iv_ygd_status.setBackgroundResource(R.drawable.textview_border_orange);
+        }else if ("2".equals(status)) { //   已归档
+            holder.iv_ygd_status.setText("已归档");
+            holder.iv_ygd_status.setTextColor(Color.parseColor("#f0f0f0"));
+            holder.iv_ygd_status.setBackgroundResource(R.drawable.textview_border_dark);
+        }
 //        holder.tv_piaohao.setText("");
 //        holder.tv_content.setText("");
 //        holder.tv_caozuoren.setText("");
