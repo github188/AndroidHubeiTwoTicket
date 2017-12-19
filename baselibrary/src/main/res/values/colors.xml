@@ -25,7 +25,7 @@
     <color name="test_gray">#f5f5f5</color>
     <color name="line_color">#e5e5e5</color>
     <color name="transparent">#00000000</color>
-    <color name="line_fc">#124f7e</color>
+    <color name="line_fc">#29cccc</color>
     <!-- 字体基础色 -->
     <color name="half_black1">#cccccccc</color>
     <color name="font_black">#707070</color>
@@ -57,5 +57,5 @@
     <color name="color_4d4d4d">#4d4d4d</color>
     <color name="color_7a7a7a">#7a7a7a</color>
 
-
+    <color name="color_ff506c">#ff506c</color>
 </resources>
