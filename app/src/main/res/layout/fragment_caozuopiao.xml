@@ -7,7 +7,6 @@
     android:orientation="vertical" >
 
     <tickets.nari.com.hubeitickets.customview.PullToRefreshLayout
-        
         android:id="@+id/pf_fragment_archived"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
