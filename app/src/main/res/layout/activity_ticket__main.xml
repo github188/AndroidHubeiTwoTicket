@@ -42,7 +42,7 @@
                 android:padding="@dimen/dimen_10"
                 android:text="操作票"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
 

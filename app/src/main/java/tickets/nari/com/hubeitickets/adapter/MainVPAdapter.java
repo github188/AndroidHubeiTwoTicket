@@ -18,8 +18,8 @@ import tickets.nari.com.hubeitickets.fragment.ProcessedFragment;
 
 public class MainVPAdapter extends FragmentPagerAdapter {
     private final String[] titles = {"待处理", "执行中", "已归档"};
-    private ArchivedFragment mProcessedFragment;
-    private ArchivedFragment mExecutionFragment;
+    private ProcessedFragment mProcessedFragment;
+    private ExecutionFragment mExecutionFragment;
     private ArchivedFragment mArchivedFragment;
     private HashMap<Integer, Fragment> hashMap = new HashMap<>();
 
@@ -37,13 +37,13 @@ public class MainVPAdapter extends FragmentPagerAdapter {
             switch (position) {
                 case 0://   待处理
                     if (mProcessedFragment == null) {
-                        mProcessedFragment = new ArchivedFragment();// ProcessedFragment();
+                        mProcessedFragment = new ProcessedFragment();// ProcessedFragment();
                     }
                     hashMap.put(position, mProcessedFragment);
                     return mProcessedFragment;
                 case 1://   执行中
                     if (mExecutionFragment == null) {
-                        mExecutionFragment = new ArchivedFragment();//ExecutionFragment();
+                        mExecutionFragment = new ExecutionFragment();//ExecutionFragment();
                     }
                     hashMap.put(position, mExecutionFragment);
                     return mExecutionFragment;
