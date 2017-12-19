@@ -20,14 +20,15 @@ import tickets.nari.com.hubeitickets.R;
 import tickets.nari.com.hubeitickets.adapter.StepsListViewAdapter;
 
 /**
- * Created by ShawDLee on 2017/11/23.
+ * Created by xieshibao on 2017/11/23.、
+ * 操作项目界面
  */
 
 public class OperationStepsActivity extends FragmentActivity implements View.OnClickListener{
 
     private ImageView back;
     private ListView operation_xiangmuList;
-    StepsListViewAdapter stepsListViewAdapter;
+    private StepsListViewAdapter stepsListViewAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
