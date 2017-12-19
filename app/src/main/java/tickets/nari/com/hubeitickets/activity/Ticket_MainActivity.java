@@ -47,22 +47,11 @@ public class Ticket_MainActivity extends FragmentActivity {
     private void initView() {
         TabLayout tab_bar = (TabLayout) findViewById(R.id.tab_bar);
         ViewPager vp_main_activity = (ViewPager) findViewById(R.id.vp_main_activity);
-        //  vp_main_activity.setOffscreenPageLimit(3);//设置预加载的fragment个数，防止调取动态数据时，listview会显示空白，原因：就是onCreateView每次都调用导致的，这样fragment每次都会设置新的view，而调试发现，之前的view并没有被回收……这就导致了，新的view覆盖了之前设置的view，
-//        mIv_main_menu = findViewById(R.id.iv_main_menu);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-//        navigationView = (NavigationView) findViewById(R.id.nav_view);
         MainVPAdapter adapter = new MainVPAdapter(getSupportFragmentManager(), getApplicationContext());
         vp_main_activity.setAdapter(adapter);
-        // tab_bar.setTabMode(TabLayout.MODE_SCROLLABLE);
         tab_bar.setupWithViewPager(vp_main_activity);
-//        navigationView.setItemIconTintList(null);//设置图标为原来的颜色
-//        navigationView.setNavigationItemSelectedListener(this);
-//        mIv_main_menu.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                drawerLayout.openDrawer(GravityCompat.START);
-//            }
-//        });
+
     }
 
 
