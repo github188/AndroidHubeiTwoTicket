@@ -11,7 +11,7 @@
 
     <!--设置tablayout的字体大小-->
     <style name="TabLayoutTextStyle">
-        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textSize">@dimen/textsize_16</item>
     </style>
 
     <style name="AppBaseTheme" parent="android:Theme.Light">

@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -14,14 +13,14 @@ import tickets.nari.com.hubeitickets.R;
 import tickets.nari.com.hubeitickets.bean.ArchivedTicketListBean;
 
 /**
- * Created by DWQ on 2017/11/1.
- * 已归档界面adapter
+ * Created by xieshibao on 2017/12/18.
+ * 操作票三种状态的列表界面
  */
 
-public class ArchivedAdapter extends BaseAdapter {
+public class CaoZuoPiao_List_Adapter extends BaseAdapter {
     private Context mContext;
     private List<ArchivedTicketListBean> ticketList; //   票列表集合
-    public ArchivedAdapter(Context mContext,List<ArchivedTicketListBean> ticketList) {
+    public CaoZuoPiao_List_Adapter(Context mContext, List<ArchivedTicketListBean> ticketList) {
         this.mContext = mContext;
         this.ticketList = ticketList;
     }
@@ -51,7 +50,7 @@ public class ArchivedAdapter extends BaseAdapter {
         ViewHolder holder;
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(
-                    R.layout.item_fragment_archived_adapter, null);
+                    R.layout.item_fragment_caozuopiao_adapter, null);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
@@ -84,14 +83,14 @@ public class ArchivedAdapter extends BaseAdapter {
     }
 
     public static class ViewHolder {
-        ImageView iv_ygd_status;
+        TextView iv_ygd_status;
         TextView tv_piaohao;
         TextView tv_content;
         TextView tv_caozuoren;
         TextView tv_date;
 
         private ViewHolder(View convertView){
-             iv_ygd_status = (ImageView) convertView.findViewById(R.id.iv_ygd_status);
+             iv_ygd_status = (TextView) convertView.findViewById(R.id.iv_ygd_status);
             tv_piaohao = (TextView) convertView.findViewById(R.id.tv_piaohao);
             tv_content = (TextView) convertView.findViewById(R.id.tv_content);
             tv_caozuoren = (TextView) convertView.findViewById(R.id.tv_caozuoren);

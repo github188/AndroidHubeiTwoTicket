@@ -10,14 +10,14 @@
     android:layout_height="wrap_content"
     android:paddingRight="20dp"
     android:paddingLeft="20dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="10dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="7dp"
     android:orientation="vertical"
     android:background="@color/white">
     <RelativeLayout
         android:id="@+id/re_ygd"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
         android:gravity="center_vertical">
 
         <TextView
@@ -26,15 +26,19 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:textColor="@color/color_4d4d4d"
-            android:text="票号：" />
+            android:text="票号："
+            android:textSize="15sp"/>
 
-        <ImageView
+        <TextView
             android:id="@+id/iv_ygd_status"
-            android:layout_width="55dp"
-            android:layout_height="20dp"
+            android:layout_width="61dp"
+            android:layout_height="23dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@color/colorFill" />
+            android:text="待处理"
+            android:textColor="@color/color_ff506c"
+            android:gravity="center"
+            android:background="@drawable/textview_border_red" />
     </RelativeLayout>
 
     <View
@@ -47,22 +51,24 @@
         android:id="@+id/tv_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/color_4d4d4d"
-        android:text="220kv普九策划i手法哦i好地方" />
+        android:text="220kv普九策划i手法哦i好地方"
+        android:textSize="14sp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="13dp">
 
         <TextView
             android:id="@+id/tv_caozuoren"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/color_7a7a7a"
-            android:text="操作人：张耀文" />
+            android:text="操作人：张耀文"
+            android:textSize="12sp"/>
 
         <TextView
             android:id="@+id/tv_date"
@@ -70,7 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:textColor="@color/color_7a7a7a"
-            android:text="2016/11/04 09:49" />
+            android:text="2016/11/04 09:49"
+            android:textSize="12sp"/>
     </RelativeLayout>
 </LinearLayout>
 </LinearLayout>
