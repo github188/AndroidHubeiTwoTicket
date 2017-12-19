@@ -21,7 +21,7 @@
         <RelativeLayout
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="43dp"
             android:background="@color/line_fc">
 
             <!--<ImageView-->
@@ -42,21 +42,22 @@
                 android:padding="@dimen/dimen_10"
                 android:text="操作票"
                 android:textColor="@color/white"
-                android:textSize="@dimen/textsize_16" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_bar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_35"
+            android:layout_height="40dp"
             android:background="@color/white"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/line_fc"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/line_fc"
             app:tabTextAppearance="@style/TabLayoutTextStyle"
-            app:tabTextColor="@color/colorItemText" />
+            app:tabTextColor="@color/colorItemText"
+            />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/vp_main_activity"
