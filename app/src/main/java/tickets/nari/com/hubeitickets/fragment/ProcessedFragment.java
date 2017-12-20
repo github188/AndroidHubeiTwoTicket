@@ -80,10 +80,10 @@ public class ProcessedFragment extends android.support.v4.app.Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Intent intent = new Intent(getActivity(), ExecutionActivity.class);
-                intent.putExtra("mbId", ticketList.get(position).getMBID());
-                intent.putExtra("obj_id", ticketList.get(position).getOBJ_ID());
-                startActivity(intent);
+//                Intent intent = new Intent(getActivity(), ExecutionActivity.class);
+//                intent.putExtra("mbId", ticketList.get(position).getMBID());
+//                intent.putExtra("obj_id", ticketList.get(position).getOBJ_ID());
+//                startActivity(intent);
             }
         });
     }
