@@ -5,48 +5,163 @@
     android:background="@color/colorFc"
     android:descendantFocusability="blocksDescendants">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:descendantFocusability="afterDescendants"
         android:orientation="vertical">
 
-        <View
-            android:id="@+id/view_title"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_25"
-            android:background="@color/line_fc" />
-
-        <RelativeLayout
-            android:id="@+id/re_exe_title"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:background="@color/line_fc">
-
-            <ImageView
-                android:id="@+id/image_execution_activity_back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/dimen_10"
-                android:padding="@dimen/dimen_5"
-                android:src="@mipmap/back" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="已归档"
-                android:textColor="@color/colorTitle"
-                android:textSize="18sp" />
-        </RelativeLayout>
-
-        <ScrollView
+        <LinearLayout
+            android:id="@+id/ticket_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_25"
+                android:background="@color/line_fc" />
+
+            <RelativeLayout
+                android:id="@+id/re_exe_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/line_fc">
+
+                <ImageView
+                    android:id="@+id/image_execution_activity_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:padding="@dimen/dimen_5"
+                    android:src="@mipmap/back" />
+
+                <TextView
+                    android:id="@+id/ticket_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="已归档"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ticket_bottom_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:id="@+id/ticket_button_process"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/ticket_zuofei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:background="@color/line_fc"
+                    android:drawableLeft="@mipmap/ico_zuofei"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="27dp"
+                    android:paddingRight="27dp"
+                    android:text="作废"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/ticket_zhixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:background="@color/line_fc"
+                    android:drawableLeft="@mipmap/ico_zhixing"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="27dp"
+                    android:paddingRight="27dp"
+                    android:text="执行"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ticket_button_execution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/ticket_weizhixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:background="@color/line_fc"
+                    android:drawableLeft="@mipmap/ico_weizhixing"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="27dp"
+                    android:paddingRight="27dp"
+                    android:text="未执行"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/ticket_zhongjie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:background="@color/line_fc"
+                    android:drawableLeft="@mipmap/ico_zhongjie"
+                    android:drawablePadding="10dp"
+                    android:paddingLeft="27dp"
+                    android:paddingRight="27dp"
+                    android:text="终结"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+        </RelativeLayout>
+        <ScrollView
+            android:id="@+id/ticket_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_above="@+id/ticket_bottom_button"
+            android:layout_below="@id/ticket_title"
             android:scrollbars="none">
 
             <LinearLayout
@@ -710,6 +825,9 @@
             </LinearLayout>
 
         </ScrollView>
-    </LinearLayout>
+
+
+
+    </RelativeLayout>
 
 </RelativeLayout>

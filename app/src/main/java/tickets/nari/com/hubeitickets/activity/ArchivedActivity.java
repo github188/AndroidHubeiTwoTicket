@@ -30,10 +30,10 @@ import static com.nari.tickets.baselibrary.util.CommonUtil.setListViewHeightBase
 
 
 /**
- * 执行中界面
+ * 已归档界面
  */
 
-public class ExecutionActivity extends FragmentActivity implements View.OnClickListener {
+public class ArchivedActivity extends FragmentActivity implements View.OnClickListener {
     //返回
     private ImageView back;
     //操作状态
@@ -197,7 +197,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        mCb_exe_right = findViewById(R.id.cb_exe_right);
 //        mTv_exe_look_all = findViewById(R.id.tv_exe_look_all);
         lv_exe_czxm = findViewById(R.id.lv_exe_czxm);
-        caoZuoXM_listAdapter = new CaoZuoXM_ListAdapter(this);
+        caoZuoXM_listAdapter = new CaoZuoXM_ListAdapter(this,null);
         lv_exe_czxm.setAdapter(caoZuoXM_listAdapter);
         setListViewHeightBasedOnChildren(lv_exe_czxm);
 //        mSl_exe = findViewById(R.id.sl_exe);
@@ -322,7 +322,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //            @Override
 //            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 //                Log.e("lala", "lv_exe_czxm.getChildCount()============" + lv_exe_czxm.getChildCount());
-////                RiskPopWin riskPopWin = new RiskPopWin(ExecutionActivity.this);
+////                RiskPopWin riskPopWin = new RiskPopWin(TicketDetail_Activity.this);
 ////                if (riskPopWin.isShowing()) {
 ////                    riskPopWin.dismiss();
 ////                }
@@ -338,10 +338,10 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                String str = tv_exe_czxm_one.getText().toString().trim();
 //                if (str.indexOf("(") != -1) {   //    != -1 位包含该字符
 //                    // mExecutionActivityAdapter.updateItemView(i, true, "长按了第" + i);
-//                    CusDialogDixian cusDialogDixian = new CusDialogDixian(ExecutionActivity.this, mExecutionActivityAdapter, i, str);
+//                    CusDialogDixian cusDialogDixian = new CusDialogDixian(TicketDetail_Activity.this, mExecutionActivityAdapter, i, str);
 //                    cusDialogDixian.show();
 //                } else {
-//                    Toast.makeText(ExecutionActivity.this, "该步骤不可编辑", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(TicketDetail_Activity.this, "该步骤不可编辑", Toast.LENGTH_SHORT).show();
 //                }
 //
 //                return true;
@@ -438,7 +438,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 ////                if (danren == false && jianhu == false && jianxiu == false) {
 ////                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 ////                } else {
-////                    CustomSignatureDialog dialog1 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+////                    CustomSignatureDialog dialog1 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 ////                        @Override
 ////                        public void getSpinnerText(String userName) {
 ////                            String tpr = userName;
@@ -452,7 +452,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 ////                if (danren == false && jianhu == false && jianxiu == false) {
 ////                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 ////                } else {
-////                    CustomSignatureDialog dialog2 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+////                    CustomSignatureDialog dialog2 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 ////                        @Override
 ////                        public void getSpinnerText(String userName) {
 ////                            String spr = userName;
@@ -466,7 +466,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                if (danren == false && jianhu == false && jianxiu == false) {
 //                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 //                } else {
-//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 //                        @Override
 //                        public void getSpinnerText(String userName) {
 //                            String fzr = userName;
@@ -480,7 +480,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                if (danren == false && jianhu == false && jianxiu == false) {
 //                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 //                } else {
-//                    CustomSignatureDialog dialog4 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+//                    CustomSignatureDialog dialog4 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 //                        @Override
 //                        public void getSpinnerText(String userName) {
 //                            String czr = userName;
@@ -494,7 +494,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                if (danren == false && jianhu == false && jianxiu == false) {
 //                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 //                } else if (jianhu == true || jianxiu == true) {
-//                    CustomSignatureDialog dialog5 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+//                    CustomSignatureDialog dialog5 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 //                        @Override
 //                        public void getSpinnerText(String userName) {
 //                            String jhr = userName;
@@ -531,18 +531,18 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                Toast.makeText(getApplicationContext(), "点击了保存······", Toast.LENGTH_SHORT).show();
 //                break;
 //            case R.id.image_execution_activity_upPopup://顶部菜单
-//                UpPopupWindow upPopupWindow = new UpPopupWindow(ExecutionActivity.this, popup_up);
+//                UpPopupWindow upPopupWindow = new UpPopupWindow(TicketDetail_Activity.this, popup_up);
 //                break;
 //            case R.id.image_execution_activity_downPopup://操作项目菜单
-//                DownPopupWindow downPopupWindow = new DownPopupWindow(ExecutionActivity.this, popup_down);
+//                DownPopupWindow downPopupWindow = new DownPopupWindow(TicketDetail_Activity.this, popup_down);
 //                break;
 //            case R.id.tv_exe_look_all:  //   查看全部
-////                Intent intent = new Intent(ExecutionActivity.this, OperationStepsActivity.class);
+////                Intent intent = new Intent(TicketDetail_Activity.this, OperationStepsActivity.class);
 ////                startActivity(intent);
 //                break;
 //            case R.id.ll_exe_activity_diaodu://调度令
 //                Intent intent1 = new Intent();
-//                intent1.setClass(ExecutionActivity.this, OrderActivity.class);
+//                intent1.setClass(TicketDetail_Activity.this, OrderActivity.class);
 //                startActivity(intent1);
 //                break;
 ////            case R.id.tv_exe_czks_time:
@@ -563,7 +563,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                if (danren == false && jianhu == false && jianxiu == false) {
 //                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 //                } else {
-//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 //                        @Override
 //                        public void getSpinnerText(String userName) {
 //                            String fzr = userName;
@@ -577,7 +577,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                if (danren == false && jianhu == false && jianxiu == false) {
 //                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 //                } else {
-//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 //                        @Override
 //                        public void getSpinnerText(String userName) {
 //                            String fzr = userName;
@@ -591,7 +591,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                if (danren == false && jianhu == false && jianxiu == false) {
 //                    Toast.makeText(getApplicationContext(), "必须选择一种操作模式", Toast.LENGTH_SHORT).show();
 //                } else {
-//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(ExecutionActivity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
+//                    CustomSignatureDialog dialog3 = new CustomSignatureDialog(TicketDetail_Activity.this, objId, mbId, new CustomSignatureDialog.MyListener() {
 //                        @Override
 //                        public void getSpinnerText(String userName) {
 //                            String fzr = userName;
@@ -622,14 +622,14 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        Object[] params = new Object[]{sb};
 //        String data = DataReadUtil.getDataFromDb(serviceName, interfaceName, params);
 //        if (data == null && "".equals(data)) {
-//            Toast.makeText(ExecutionActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(TicketDetail_Activity.this, "请检查网络", Toast.LENGTH_SHORT).show();
 //        } else {
 //            JSONObject datas;
 //            try {
 //                datas = new JSONObject(data);
 //                JSONArray records = datas.getJSONArray("records");
 //                if (records.length() == 0) {
-//                    Toast.makeText(ExecutionActivity.this, "数据为空", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(TicketDetail_Activity.this, "数据为空", Toast.LENGTH_SHORT).show();
 //                } else {
 //                    Log.e("lala", "records=======" + records.toString());
 //                    JSONObject record = records.getJSONObject(0);
@@ -640,7 +640,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                        if ("start".equals(stytle)) {
 //                            toStartCzp();
 //                        }else {
-//                            Toast.makeText(ExecutionActivity.this, "当前是暂停状态", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(TicketDetail_Activity.this, "当前是暂停状态", Toast.LENGTH_SHORT).show();
 //                        }
 //
 //                    } else {
@@ -648,7 +648,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                        if ("pause".equals(stytle)) {
 //                            toPauseCzp();
 //                        }else {
-//                            Toast.makeText(ExecutionActivity.this, "当前不在暂停状态", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(TicketDetail_Activity.this, "当前不在暂停状态", Toast.LENGTH_SHORT).show();
 //                        }
 //
 //                    }
@@ -677,24 +677,24 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        Object[] params = new Object[]{sb};
 //        String data = DataReadUtil.getDataFromDb(serviceName, interfaceName, params);
 //        if (data == null && "".equals(data)) {
-//            Toast.makeText(ExecutionActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(TicketDetail_Activity.this, "请检查网络", Toast.LENGTH_SHORT).show();
 //        } else {
 //            JSONObject datas;
 //            try {
 //                datas = new JSONObject(data);
 //                JSONArray records = datas.getJSONArray("records");
 //                if (records.length() == 0) {
-//                    Toast.makeText(ExecutionActivity.this, "数据为空", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(TicketDetail_Activity.this, "数据为空", Toast.LENGTH_SHORT).show();
 //                } else {
 //                    Log.e("lala", "records=======" + records.toString());
 //                    JSONObject record = records.getJSONObject(0);
 //                    //工作票主键
 //                    String flag = record.getString("FLAG");
 //                    if ("true".equals(flag)) {
-//                        Toast.makeText(ExecutionActivity.this, "执行成功", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(TicketDetail_Activity.this, "执行成功", Toast.LENGTH_SHORT).show();
 //
 //                    } else {
-//                        Toast.makeText(ExecutionActivity.this, "执行失败", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(TicketDetail_Activity.this, "执行失败", Toast.LENGTH_SHORT).show();
 //                    }
 //                }
 //
@@ -721,24 +721,24 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        Object[] params = new Object[]{sb};
 //        String data = DataReadUtil.getDataFromDb(serviceName, interfaceName, params);
 //        if (data == null && "".equals(data)) {
-//            Toast.makeText(ExecutionActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(TicketDetail_Activity.this, "请检查网络", Toast.LENGTH_SHORT).show();
 //        } else {
 //            JSONObject datas;
 //            try {
 //                datas = new JSONObject(data);
 //                JSONArray records = datas.getJSONArray("records");
 //                if (records.length() == 0) {
-//                    Toast.makeText(ExecutionActivity.this, "数据为空", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(TicketDetail_Activity.this, "数据为空", Toast.LENGTH_SHORT).show();
 //                } else {
 //                    Log.e("lala", "records=======" + records.toString());
 //                    JSONObject record = records.getJSONObject(0);
 //                    //工作票主键
 //                    String flag = record.getString("FLAG");
 //                    if ("true".equals(flag)) {
-//                        Toast.makeText(ExecutionActivity.this, "暂停成功", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(TicketDetail_Activity.this, "暂停成功", Toast.LENGTH_SHORT).show();
 //
 //                    } else {
-//                        Toast.makeText(ExecutionActivity.this, "暂停失败", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(TicketDetail_Activity.this, "暂停失败", Toast.LENGTH_SHORT).show();
 //                    }
 //                }
 //
@@ -789,24 +789,24 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        String data = DataReadUtil.getDataFromDb(serviceName, interfaceName, params);
 //        Log.e("lala", "点击终结按钮后的数据===============" + data);
 //        if (data == null && "".equals(data)) {
-//            Toast.makeText(ExecutionActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(TicketDetail_Activity.this, "请检查网络", Toast.LENGTH_SHORT).show();
 //        } else {
 //            JSONObject datas;
 //            try {
 //                datas = new JSONObject(data);
 //                JSONArray records = datas.getJSONArray("records");
 //                if (records.length() == 0) {
-//                    Toast.makeText(ExecutionActivity.this, "数据为空", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(TicketDetail_Activity.this, "数据为空", Toast.LENGTH_SHORT).show();
 //                } else {
 //                    Log.e("lala", "records=======" + records.toString());
 //                    JSONObject record = records.getJSONObject(0);
 //                    //工作票主键
 //                    String flag = record.getString("FLAG");
 //                    if ("true".equals(flag)) {
-//                        Toast.makeText(ExecutionActivity.this, "终结成功", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(TicketDetail_Activity.this, "终结成功", Toast.LENGTH_SHORT).show();
 //                        finish();
 //                    } else {
-//                        Toast.makeText(ExecutionActivity.this, "终结失败", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(TicketDetail_Activity.this, "终结失败", Toast.LENGTH_SHORT).show();
 //                    }
 //                }
 //
@@ -821,7 +821,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
  * 请求网络获取票详情页数据*/
     public void getTicketDetailsData() {
 //        if (objId == null || mbId == null || "".equals(objId) || "".equals(mbId)) {
-//            Toast.makeText(ExecutionActivity.this, "用户id为空，请重新登陆", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(TicketDetail_Activity.this, "用户id为空，请重新登陆", Toast.LENGTH_SHORT).show();
 //        } else {
 //            StringBuilder sb = new StringBuilder();
 //            //拼接请求体
@@ -904,7 +904,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        mTv_exe_qm_czr.setText(recordsBean.getCZRMC());
 //        mTv_exe_qm_jhr.setText(recordsBean.getJHRMC());
 //        mTv_exe_qm_tpsj.setText("");
-//        mExecutionActivityAdapter = new ExecutionActivityAdapter(ExecutionActivity.this, mCzbzArray, lv_exe_czxm, objId);//   lv_exe_czxm
+//        mExecutionActivityAdapter = new ExecutionActivityAdapter(TicketDetail_Activity.this, mCzbzArray, lv_exe_czxm, objId);//   lv_exe_czxm
 ////        mTv_exe_qm_tpr.setText("");
 ////        mTv_exe_qm_spr.setText("");
 ////        mTv_exe_qm_fzr.setText(recordsBean.getZBFZRMC());
@@ -988,10 +988,10 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        String qm_fzr = mTv_exe_qm_fzr.getText().toString().toString();
 //
 //        if (mRYMC == null || "".equals(mRYMC) || mUserId == null || "".equals(mUserId) || objId == null || mbId == null) {
-//            Toast.makeText(ExecutionActivity.this, "登陆用户名为空，请重新登陆mip", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(TicketDetail_Activity.this, "登陆用户名为空，请重新登陆mip", Toast.LENGTH_SHORT).show();
 //        } else {
 //            if (danren == false && jianhu == false && jianxiu == false) {
-//                Toast.makeText(ExecutionActivity.this, "必须选择一种操作模式才可保存", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(TicketDetail_Activity.this, "必须选择一种操作模式才可保存", Toast.LENGTH_SHORT).show();
 //            } else {
 //                StringBuilder sb = new StringBuilder();
 //                //拼接请求体
@@ -1071,24 +1071,24 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                String data = DataReadUtil.getDataFromDb(serviceName, interfaceName, params);
 //                Log.e("lala", "保存接口返回数据data========" + data);
 //                if (data == null && "".equals(data)) {
-//                    Toast.makeText(ExecutionActivity.this, "请检查网络", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(TicketDetail_Activity.this, "请检查网络", Toast.LENGTH_SHORT).show();
 //                } else {
 //                    JSONObject datas;
 //                    try {
 //                        datas = new JSONObject(data);
 //                        JSONArray records = datas.getJSONArray("records");
 //                        if (records.length() == 0) {
-//                            Toast.makeText(ExecutionActivity.this, "数据为空", Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(TicketDetail_Activity.this, "数据为空", Toast.LENGTH_SHORT).show();
 //                        } else {
 //                            Log.e("lala", "records=======" + records.toString());
 //                            JSONObject record = records.getJSONObject(0);
 //                            //工作票主键
 //                            String flag = record.getString("FLAG");
 //                            if ("true".equals(flag)) {
-//                                Toast.makeText(ExecutionActivity.this, "保存成功", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(TicketDetail_Activity.this, "保存成功", Toast.LENGTH_SHORT).show();
 //                                finish();
 //                            } else {
-//                                Toast.makeText(ExecutionActivity.this, "保存失败，请检查网络和上传参数", Toast.LENGTH_SHORT).show();
+//                                Toast.makeText(TicketDetail_Activity.this, "保存失败，请检查网络和上传参数", Toast.LENGTH_SHORT).show();
 //                            }
 //                        }
 //
@@ -1140,15 +1140,15 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //                        e.printStackTrace();
 //                    }
 //                    if (czksT == null || "".equals(czksT)) {
-//                        Toast.makeText(ExecutionActivity.this, "请先选择操作开始时间！", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(TicketDetail_Activity.this, "请先选择操作开始时间！", Toast.LENGTH_LONG).show();
 //                    } else {
 ////                    if (mDate1 == null || "".equals(mDate1)) {
-////                        Toast.makeText(ExecutionActivity.this, "请先选择操作开始时间！", Toast.LENGTH_LONG).show();
+////                        Toast.makeText(TicketDetail_Activity.this, "请先选择操作开始时间！", Toast.LENGTH_LONG).show();
 ////                    }else {
 //                        if (date.after(d)) {
 //                            mTv_exe_czjs_time.setText(getTime(date));
 //                        } else {
-//                            Toast.makeText(ExecutionActivity.this, "操作结束时间必须晚于操作开始时间！", Toast.LENGTH_LONG).show();
+//                            Toast.makeText(TicketDetail_Activity.this, "操作结束时间必须晚于操作开始时间！", Toast.LENGTH_LONG).show();
 //                        }
 //                    }
 //

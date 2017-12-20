@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".activity.OperationStepsActivity"
             android:screenOrientation="sensorPortrait"/>
-        <activity android:name=".activity.ExecutionActivity"
+        <activity android:name=".activity.TicketDetail_Activity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".activity.ArchivedActivity"
             android:screenOrientation="sensorPortrait"/>
     </application>
 
