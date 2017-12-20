@@ -265,6 +265,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        rl_exe_qm_czr.setOnClickListener(this);
 //        rl_exe_qm_jhr.setOnClickListener(this);
         mTv_exe_look_all.setOnClickListener(this);
+
 //        mTv_exe_fl_time.setOnClickListener(this);
 //        mTv_exe_czks_time.setOnClickListener(this);
 //        mTv_exe_czjs_time.setOnClickListener(this);
