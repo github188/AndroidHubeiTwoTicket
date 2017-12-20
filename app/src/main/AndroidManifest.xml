@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".activity.OperationStepsActivity"
             android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".activity.ExecutionActivity"
+            android:screenOrientation="sensorPortrait"/>
     </application>
 
 </manifest>
