@@ -20,8 +20,6 @@
             android:screenOrientation="sensorPortrait"/>
         <activity android:name=".activity.TicketDetail_Activity"
             android:screenOrientation="sensorPortrait"/>
-        <activity android:name=".activity.ArchivedActivity"
-            android:screenOrientation="sensorPortrait"/>
     </application>
 
 </manifest>
