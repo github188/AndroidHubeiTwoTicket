@@ -246,7 +246,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        start.setOnClickListener(this);
 //        end.setOnClickListener(this);
 //        save.setOnClickListener(this);
-//        back.setOnClickListener(this);
+        back.setOnClickListener(this);
 //        no1.setOnClickListener(this);
 //        moren1.setOnClickListener(this);
 //        yes1.setOnClickListener(this);
