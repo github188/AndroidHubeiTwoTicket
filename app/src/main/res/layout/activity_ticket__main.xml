@@ -5,8 +5,6 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,16 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:background="@color/line_fc">
-
-            <!--<ImageView-->
-                <!--android:id="@+id/iv_main_menu"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentLeft="true"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                <!--android:padding="@dimen/dimen_5"-->
-                <!--android:src="@mipmap/title_menu" />-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -64,14 +52,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-
-    <include layout="@layout/menu_slide_left"/>
-    <!--<android.support.design.widget.NavigationView-->
-    <!--android:id="@+id/nav_view"-->
-    <!--android:layout_width="@dimen/dimen_300"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_gravity="start"-->
-    <!--app:headerLayout="@layout/navigation_main_activity"-->
-    <!--app:menu="@menu/menu_drawer_left" />-->
 
 </android.support.v4.widget.DrawerLayout>
