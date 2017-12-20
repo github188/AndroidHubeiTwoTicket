@@ -3,39 +3,30 @@ package tickets.nari.com.hubeitickets.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import tickets.nari.com.hubeitickets.R;
+import tickets.nari.com.hubeitickets.adapter.CaoZuoXM_ListAdapter;
+
+import static com.nari.tickets.baselibrary.util.CommonUtil.setListViewHeightBasedOnChildren;
 
 
 /**
@@ -94,8 +85,10 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
     private CheckBox mCb_exe_center; //   单人操作
     private CheckBox mCb_exe_right; //   检修人员操作
     private TextView mTv_exe_look_all; // 查看全部
-//    private CustomListView lv_exe_czxm;
+    private ListView lv_exe_czxm;
 //    private ExecutionActivityAdapter mExecutionActivityAdapter;//   步骤适配器
+
+    private CaoZuoXM_ListAdapter caoZuoXM_listAdapter;
     private boolean mIsSplsh = true;  // 默认滑动初始值
     private String[] mCzbzArray;
     public RelativeLayout re_exe_title;
@@ -105,16 +98,16 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
     private String mbId;
     private String mRYMC;
     private String mUserId;
-//    private TimePickerView pvCustomTime;
+    //    private TimePickerView pvCustomTime;
     private int mTimeStyle;   //   用于区分是那个时间按钮 1：发令时间 ； 2：操作开始时间 ； 3： 操作结束时间；
     private Date mDate1; //   操作开始时间
 
     private RadioGroup czRg;
-    private RadioButton jkRb,drRb,jxRb;
-    private TextView kssj,jssj;
-    private TextView czr_xm,jhr_xm,ywfzr_xm,jkTv,drTv,jxTv;
-    private ImageView czr_right,jhr_right,ywfzr_right;
-    private TextView top_name,czdw,bh;
+    private RadioButton jkRb, drRb, jxRb;
+    private TextView kssj, jssj;
+    private TextView czr_xm, jhr_xm, ywfzr_xm, jkTv, drTv, jxTv;
+    private ImageView czr_right, jhr_right, ywfzr_right;
+    private TextView top_name, czdw, bh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,7 +121,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
         setContentView(R.layout.execution_ticket);
-//        init();
+        init();
     }
 
 
@@ -171,6 +164,10 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        mTv_exe_czks_time = findViewById(R.id.tv_exe_czks_time);
 //        mTv_exe_czjs_time = findViewById(R.id.tv_exe_czjs_time);
         mTv_exe_czrw = findViewById(R.id.tv_exe_czrw);
+        mTv_exe_czrw.setMovementMethod(ScrollingMovementMethod.getInstance());
+        mTv_exe_czrw.setText("desalhngoairghowpighwporgihwporghiwporghipworhigpworhegpowrighpowghiowghosweghi tvnupvworut vnwotr          rqweitpoqwqwrghipofgsgnbv;lsfnbgslfkgns;lghfpowrgihwporihgporwghfposghfposghfpsohgpwghpowhfigpo;shf");
+
+
 //        mTv_exe_order_one = findViewById(R.id.tv_exe_order_one);
 //        mTv_exe_czxm_one = findViewById(R.id.tv_exe_czxm_one);
 //        mTv_exe_zxsj_one = findViewById(R.id.tv_exe_zxsj_one);
@@ -198,8 +195,11 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        mCb_exe_left = findViewById(R.id.cb_exe_left);
 //        mCb_exe_center = findViewById(R.id.cb_exe_center);
 //        mCb_exe_right = findViewById(R.id.cb_exe_right);
-        mTv_exe_look_all = findViewById(R.id.tv_exe_look_all);
-//        lv_exe_czxm = findViewById(R.id.lv_exe_czxm);
+//        mTv_exe_look_all = findViewById(R.id.tv_exe_look_all);
+        lv_exe_czxm = findViewById(R.id.lv_exe_czxm);
+        caoZuoXM_listAdapter = new CaoZuoXM_ListAdapter(this);
+        lv_exe_czxm.setAdapter(caoZuoXM_listAdapter);
+        setListViewHeightBasedOnChildren(lv_exe_czxm);
 //        mSl_exe = findViewById(R.id.sl_exe);
 
         mTv_exe_look_all = findViewById(R.id.tv_exe_look_all);
@@ -264,7 +264,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        rl_exe_qm_fzr.setOnClickListener(this);
 //        rl_exe_qm_czr.setOnClickListener(this);
 //        rl_exe_qm_jhr.setOnClickListener(this);
-//        mTv_exe_look_all.setOnClickListener(this);
+        mTv_exe_look_all.setOnClickListener(this);
 //        mTv_exe_fl_time.setOnClickListener(this);
 //        mTv_exe_czks_time.setOnClickListener(this);
 //        mTv_exe_czjs_time.setOnClickListener(this);
@@ -390,9 +390,13 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-//            case R.id.image_execution_activity_back://返回按钮
-//                finish();
-//                break;
+            case R.id.image_execution_activity_back://返回按钮
+                finish();
+                break;
+            case R.id.tv_exe_look_all:
+                Intent intent = new Intent(this, OperationStepsActivity.class);
+                startActivity(intent);
+                break;
 //            case R.id.tv_execution_activity_no1://操作项目未执行状态
 //                caozuostate1.setBackgroundResource(R.mipmap.caozuo_no);
 //                break;
@@ -892,8 +896,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //            String czjsTime = recordsBean.getCZJSSJ().substring(0, recordsBean.getCZJSSJ().length() - 3);
 //            mTv_exe_czjs_time.setText(czjsTime);
 //        }
-//        mTv_exe_czrw.setText(recordsBean.getCZRW());
-//        mTv_exe_bz.setText(recordsBean.getBZ());
+        //        mTv_exe_bz.setText(recordsBean.getBZ());
 //        mTv_exe_qm_tpr.setText("");
 //        mTv_exe_qm_spr.setText("");
 //        mTv_exe_qm_fzr.setText(recordsBean.getZBFZRMC());

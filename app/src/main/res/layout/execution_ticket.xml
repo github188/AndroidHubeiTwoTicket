@@ -4,10 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorFc"
     android:descendantFocusability="blocksDescendants">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:scrollbars="none">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="执行中"
+                android:text="已归档"
                 android:textColor="@color/colorTitle"
                 android:textSize="18sp" />
         </RelativeLayout>
@@ -155,7 +152,15 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="@dimen/dimen_5"-->
         <!--android:background="@color/colorFenge"/>-->
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:descendantFocusability="afterDescendants">
         <LinearLayout
             android:id="@+id/ll_activity_check"
             android:layout_width="match_parent"
@@ -163,6 +168,7 @@
             android:paddingTop="14dp"
             android:paddingLeft="14dp"
             android:paddingRight="14dp"
+            android:paddingBottom="7dp"
             android:background="@color/line_fc"
             android:orientation="vertical">
 
@@ -191,7 +197,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -674,14 +680,13 @@
             android:id="@+id/tv_exe_czrw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="@dimen/dimen_46"
             android:layout_marginBottom="@dimen/dimen_5"
             android:layout_marginLeft="@dimen/dimen_10"
             android:layout_marginRight="@dimen/dimen_10"
             android:layout_marginTop="@dimen/dimen_2"
             android:background="@drawable/shape_tv_caozuo_task"
             android:ellipsize="end"
-            android:maxLines="3"
+            android:lines="3"
             android:textColor="@color/color_4c4c4c"
             android:textSize="@dimen/textsize_14" />
 
@@ -797,16 +802,14 @@
         <!--android:layout_height="@dimen/dimen_115">-->
 
 
-        <!--<ListView-->
-
-        <!--android:id="@+id/lv_exe_czxm"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginLeft="@dimen/dimen_10"-->
-        <!--android:layout_marginRight="@dimen/dimen_10"-->
-        <!--android:divider="@color/colorShuiPing"-->
-        <!--android:dividerHeight="@dimen/dimen_1">-->
-        <!--</ListView>-->
+        <ListView
+        android:id="@+id/lv_exe_czxm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_13"
+        android:layout_marginRight="@dimen/dimen_13"
+        android:divider="@null">
+        </ListView>
 
         <!--</ScrollView>-->
         <!--<LinearLayout-->
@@ -1640,23 +1643,36 @@
             android:orientation="horizontal" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:textColor="@color/color_989898"
+            android:text="此票以（配）调（综）字第（2016110229#）指令票为依据"/>
+
+        <TextView
             android:id="@+id/tv_exe_bz"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dimen_5"
+            android:layout_marginBottom="@dimen/dimen_7"
             android:layout_marginLeft="@dimen/dimen_10"
             android:layout_marginRight="@dimen/dimen_10"
             android:layout_marginTop="@dimen/dimen_2"
             android:background="@drawable/shape_tv_caozuo_task"
             android:ellipsize="end"
-            android:maxLines="2"
+            android:lines="3"
             android:hint="请输入备注内容..."
             android:text="看沙发电视看dna手动阀手动阀手动阀就是对方撒地方nsa的反思的发撒旦飞洒地方撒"
             android:textColor="@color/color_4c4c4c"
             android:textSize="@dimen/textsize_14" />
 
     </LinearLayout>
+
 </ScrollView>
+    </LinearLayout>
+
     <!--<LinearLayout-->
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="@dimen/dimen_38"-->
