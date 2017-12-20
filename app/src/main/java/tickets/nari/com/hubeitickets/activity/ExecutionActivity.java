@@ -246,7 +246,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        start.setOnClickListener(this);
 //        end.setOnClickListener(this);
 //        save.setOnClickListener(this);
-//        back.setOnClickListener(this);
+        back.setOnClickListener(this);
 //        no1.setOnClickListener(this);
 //        moren1.setOnClickListener(this);
 //        yes1.setOnClickListener(this);
@@ -265,6 +265,7 @@ public class ExecutionActivity extends FragmentActivity implements View.OnClickL
 //        rl_exe_qm_czr.setOnClickListener(this);
 //        rl_exe_qm_jhr.setOnClickListener(this);
         mTv_exe_look_all.setOnClickListener(this);
+
 //        mTv_exe_fl_time.setOnClickListener(this);
 //        mTv_exe_czks_time.setOnClickListener(this);
 //        mTv_exe_czjs_time.setOnClickListener(this);
