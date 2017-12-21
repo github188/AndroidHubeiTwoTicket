@@ -461,8 +461,8 @@
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_2"
                     android:background="@drawable/shape_tv_caozuo_task"
-                    android:ellipsize="end"
                     android:lines="3"
+                    android:scrollbars="vertical"
                     android:textColor="@color/color_4c4c4c"
                     android:textSize="@dimen/textsize_14" />
 
@@ -814,10 +814,10 @@
                     android:layout_marginRight="@dimen/dimen_10"
                     android:layout_marginTop="@dimen/dimen_2"
                     android:background="@drawable/shape_tv_caozuo_task"
-                    android:ellipsize="end"
                     android:hint="请输入备注内容..."
                     android:lines="3"
-                    android:text="看沙发电视看dna手动阀手动阀手动阀就是对方撒地方nsa的反思的发撒旦飞洒地方撒"
+                    android:scrollbars="vertical"
+                    android:text="看沙发电视看dna手动阀手动阀手动阀就是对方撒地方nsa的反思的发撒旦飞洒地方撒看沙发电视看dna手动阀手动阀手动阀就是对方撒地方nsa的反思的发撒旦飞洒地方撒看沙发电视看dna手动阀手动阀手动阀就是对方撒地方nsa的反思的发撒旦飞洒地方撒"
                     android:textColor="@color/color_4c4c4c"
                     android:textSize="@dimen/textsize_14" />
 

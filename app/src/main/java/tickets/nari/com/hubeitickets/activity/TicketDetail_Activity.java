@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -102,6 +103,7 @@ public class TicketDetail_Activity extends FragmentActivity implements View.OnCl
         mTv_exe_czrw.setMovementMethod(ScrollingMovementMethod.getInstance());
         mTv_exe_czrw.setText("desalhngoairghowpighwporgihwporghiwporghipworhigpworhegpowrighpowghiowghosweghi tvnupvworut vnwotr          rqweitpoqwqwrghipofgsgnbv;lsfnbgslfkgns;lghfpowrgihwporihgporwghfposghfposghfpsohgpwghpowhfigpo;shf");
         mTv_exe_bz = findViewById(R.id.tv_exe_bz);
+        mTv_exe_bz.setMovementMethod(ScrollingMovementMethod.getInstance());
         lv_exe_czxm = findViewById(R.id.lv_exe_czxm);
 
         //此处为操作项目列表，从后台取值处理后传入adapter展示
@@ -164,6 +166,9 @@ public class TicketDetail_Activity extends FragmentActivity implements View.OnCl
 
     private void initListener() {
         back.setOnClickListener(this);
+
+        mTv_exe_czrw.setOnTouchListener(textViewOnTuchListener);
+        mTv_exe_bz.setOnTouchListener(textViewOnTuchListener);
         mTv_exe_look_all.setOnClickListener(this);
 
         if (ticketType == 0 || ticketType == 1) {
@@ -291,6 +296,27 @@ public class TicketDetail_Activity extends FragmentActivity implements View.OnCl
         }
     }
 
+    /**
+     * 解决ScrollView 与TextView滑动冲突问题
+     */
+    View.OnTouchListener textViewOnTuchListener = new View.OnTouchListener() {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+
+        if(event.getAction()==MotionEvent.ACTION_DOWN){
+            //通知父控件不要干扰
+            v.getParent().requestDisallowInterceptTouchEvent(true);
+        }
+        if(event.getAction()==MotionEvent.ACTION_MOVE){
+            //通知父控件不要干扰
+            v.getParent().requestDisallowInterceptTouchEvent(true);
+        }
+        if(event.getAction()==MotionEvent.ACTION_UP){
+            v.getParent().requestDisallowInterceptTouchEvent(false);
+        }
+        return false;
+    }
+};
 
     private void initCustomTimePicker() {
 
