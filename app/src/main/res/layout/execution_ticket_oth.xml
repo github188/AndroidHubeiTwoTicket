@@ -159,7 +159,6 @@
             android:id="@+id/ticket_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
             android:layout_above="@+id/ticket_bottom_button"
             android:layout_below="@id/ticket_title"
             android:scrollbars="none">

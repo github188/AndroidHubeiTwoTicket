@@ -2,167 +2,171 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginLeft="@dimen/dimen_30"-->
-        <!--android:layout_marginRight="@dimen/dimen_30"-->
-        <!--android:background="@drawable/dia_quan"-->
-        <!--android:orientation="vertical" >-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30"
+        android:layout_marginRight="@dimen/dimen_30"
+        android:background="@drawable/dia_quan"
+        android:orientation="vertical">
 
-       <!---->
-          <!---->
-        <!--<RelativeLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@drawable/dia_quan_top" >-->
 
-            <!--<ImageView-->
-                <!--android:id="@+id/iv_qm_close"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_centerVertical="true"-->
-                <!--android:layout_marginLeft="@dimen/dimen_10"-->
-                <!--android:layout_marginRight="@dimen/dimen_10"-->
-                <!--android:src="@mipmap/close" />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dia_quan_top">
 
-            <!--<TextView-->
-                <!--android:id="@+id/tv_qm_title"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_centerInParent="true"-->
-                <!--android:padding="@dimen/dimen_8"-->
-                <!--android:text="审票人签名"-->
-                <!--android:textColor="@color/white"-->
-                <!--android:textSize="@dimen/textsize_19" />-->
-        <!--</RelativeLayout>-->
+            <ImageView
+                android:id="@+id/iv_qm_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:src="@mipmap/close" />
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="@dimen/dimen_35"-->
-            <!--android:layout_marginRight="@dimen/dimen_35"-->
-            <!--android:layout_marginTop="@dimen/dimen_20"-->
-            <!--android:gravity="center"-->
-            <!--android:orientation="horizontal" >-->
+            <TextView
+                android:id="@+id/tv_qm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dimen_8"
+                android:text="操作人签名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_19" />
+        </RelativeLayout>
 
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="@dimen/dimen_25"-->
-                <!--android:gravity="center"-->
-                <!--android:text="用户部门 ："-->
-                <!--android:textColor="@color/test_gray_66"-->
-                <!--android:textSize="@dimen/textsize_15" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_35"
+            android:layout_marginRight="@dimen/dimen_35"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <!--<Spinner-->
-                <!--android:id="@+id/spinner_club"-->
-                <!--android:layout_width="@dimen/dimen_120"-->
-                <!--android:layout_height="wrap_content" />-->
-        <!--</LinearLayout>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_25"
+                android:gravity="center"
+                android:text="用户部门 ："
+                android:textColor="@color/test_gray_66"
+                android:textSize="@dimen/textsize_15" />
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginLeft="@dimen/dimen_35"-->
-            <!--android:layout_marginRight="@dimen/dimen_35"-->
-            <!--android:layout_marginTop="@dimen/dimen_10"-->
-            <!--android:gravity="center"-->
-            <!--android:orientation="horizontal" >-->
+            <Spinner
+                android:id="@+id/spinner_club"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
 
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="@dimen/dimen_25"-->
-                <!--android:gravity="center"-->
-                <!--android:text="用户名称 ："-->
-                <!--android:textColor="@color/test_gray_66"-->
-                <!--android:textSize="@dimen/textsize_15" />-->
-            <!--&lt;!&ndash; android:entries="@array/languages" &ndash;&gt;-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_35"
+            android:layout_marginRight="@dimen/dimen_35"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <!--<Spinner-->
-                <!--android:id="@+id/spinner_name"-->
-                <!--android:layout_width="@dimen/dimen_120"-->
-                <!--android:layout_height="wrap_content" />-->
-        <!--</LinearLayout>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_25"
+                android:gravity="center"
+                android:text="用户名称 ："
+                android:textColor="@color/test_gray_66"
+                android:textSize="@dimen/textsize_15" />
+            <!-- android:entries="@array/languages" -->
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dimen_40"-->
-            <!--android:layout_marginLeft="@dimen/dimen_35"-->
-            <!--android:layout_marginRight="@dimen/dimen_35"-->
-            <!--android:layout_marginTop="@dimen/dimen_10"-->
-            <!--android:gravity="center"-->
-            <!--android:orientation="horizontal" >-->
+            <Spinner
+                android:id="@+id/spinner_name"
+                android:layout_width="@dimen/dimen_120"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="@dimen/dimen_25"-->
-                <!--android:gravity="center"-->
-                <!--android:text="用户密码 ："-->
-                <!--android:textColor="@color/test_gray_66"-->
-                <!--android:textSize="@dimen/textsize_15" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_marginLeft="@dimen/dimen_35"
+            android:layout_marginRight="@dimen/dimen_35"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="vertical" >-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_25"
+                android:gravity="center"
+                android:text="用户密码 ："
+                android:textColor="@color/test_gray_66"
+                android:textSize="@dimen/textsize_15" />
 
-                <!--<EditText-->
-                    <!--android:id="@+id/et_pw"-->
-                    <!--android:layout_width="@dimen/dimen_120"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:background="@color/white"-->
-                    <!--android:focusable="true"-->
-                    <!--android:focusableInTouchMode="true"-->
-                    <!--android:inputType="textPassword" />-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <!--<View-->
-                    <!--android:id="@+id/v_main_activity_first"-->
-                    <!--android:layout_width="@dimen/dimen_120"-->
-                    <!--android:layout_height="1dp"-->
-                    <!--android:background="@color/half_black1" />-->
-            <!--</LinearLayout>-->
-        <!--</LinearLayout>-->
+                <EditText
+                    android:id="@+id/et_pw"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="textPassword" />
 
-        <!--<RelativeLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="@dimen/dimen_60"-->
-            <!--android:layout_marginTop="@dimen/dimen_20" >-->
+                <View
+                    android:id="@+id/v_main_activity_first"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="1dp"
+                    android:background="@color/half_black1" />
+            </LinearLayout>
+        </LinearLayout>
 
-            <!--<Button-->
-                <!--android:id="@+id/bt_qm_sure"-->
-                <!--android:layout_width="@dimen/dimen_60"-->
-                <!--android:layout_height="@dimen/dimen_32"-->
-                <!--android:layout_alignParentLeft="true"-->
-                <!--android:layout_marginLeft="@dimen/dimen_28"-->
-                <!--android:background="@drawable/dia_quan_button"-->
-                <!--android:text="确认"-->
-                <!--android:textColor="@color/white"-->
-                <!--android:textSize="@dimen/textsize_14" />-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-            <!--<Button-->
-                <!--android:id="@+id/bt_cancle_qm"-->
-                <!--android:layout_width="@dimen/dimen_60"-->
-                <!--android:layout_height="@dimen/dimen_32"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:background="@drawable/dia_quan_button"-->
-                <!--android:text="取消签名"-->
-                <!--android:textColor="@color/white"-->
-                <!--android:textSize="@dimen/textsize_13" />-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
 
-            <!--<Button-->
-                <!--android:id="@+id/bt_qm_cancle"-->
-                <!--android:layout_width="@dimen/dimen_60"-->
-                <!--android:layout_height="@dimen/dimen_32"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:layout_marginRight="@dimen/dimen_26"-->
-                <!--android:background="@drawable/dia_quan_button"-->
-                <!--android:text="取消"-->
-                <!--android:textColor="@color/white"-->
-                <!--android:textSize="@dimen/textsize_14" />-->
-        <!--</RelativeLayout>-->
-    <!--</LinearLayout>-->
+                <Button
+                    android:id="@+id/bt_cancle_qm"
+                    android:layout_width="67dp"
+                    android:layout_height="@dimen/dimen_25"
+                    android:background="@drawable/dia_quan_button"
+                    android:text="取消签名"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/bt_qm_sure"
+                    android:layout_width="@dimen/dimen_60"
+                    android:layout_height="@dimen/dimen_25"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/dimen_28"
+                    android:background="@drawable/dia_quan_button"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_14" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

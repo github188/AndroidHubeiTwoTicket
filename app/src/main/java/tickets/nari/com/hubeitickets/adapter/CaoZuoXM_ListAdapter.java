@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.util.List;
+
 import tickets.nari.com.hubeitickets.R;
 
 
@@ -18,7 +20,7 @@ import tickets.nari.com.hubeitickets.R;
 public class CaoZuoXM_ListAdapter extends BaseAdapter {
     private Context context;
 
-    public CaoZuoXM_ListAdapter(Context context) {
+    public CaoZuoXM_ListAdapter(Context context, List<Object> czxm_List) {//List<Object> czxm_List为后台取回的操作项目的值的集合，用于展示，
         this.context = context;
     }
 

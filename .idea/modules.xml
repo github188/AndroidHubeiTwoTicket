@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidHubeiTwoTicket.iml" filepath="$PROJECT_DIR$/AndroidHubeiTwoTicket.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" />
     </modules>
   </component>
 </project>

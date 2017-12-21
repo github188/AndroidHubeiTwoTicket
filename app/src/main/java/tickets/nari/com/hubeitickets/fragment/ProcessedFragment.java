@@ -14,8 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import tickets.nari.com.hubeitickets.R;
-import tickets.nari.com.hubeitickets.activity.ExecutionActivity;
-import tickets.nari.com.hubeitickets.activity.OperationStepsActivity;
+import tickets.nari.com.hubeitickets.activity.TicketDetail_Activity;
 import tickets.nari.com.hubeitickets.adapter.CaoZuoPiao_List_Adapter;
 import tickets.nari.com.hubeitickets.bean.ArchivedTicketListBean;
 import tickets.nari.com.hubeitickets.customview.PullToRefreshLayout;
@@ -80,10 +79,11 @@ public class ProcessedFragment extends android.support.v4.app.Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-//                Intent intent = new Intent(getActivity(), ExecutionActivity.class);
-//                intent.putExtra("mbId", ticketList.get(position).getMBID());
-//                intent.putExtra("obj_id", ticketList.get(position).getOBJ_ID());
-//                startActivity(intent);
+                Intent intent = new Intent(getActivity(), TicketDetail_Activity.class);
+                intent.putExtra("mbId", ticketList.get(position).getMBID());
+                intent.putExtra("obj_id", ticketList.get(position).getOBJ_ID());
+                intent.putExtra("ticketType", 0);
+                startActivity(intent);
             }
         });
     }
